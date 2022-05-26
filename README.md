@@ -35,5 +35,5 @@ EOF
 % export CHEAT_BASE_PATH="`pwd`/xxx"
 ```
 
-See: sheet/sample{1,2}.md
+See: [sheet/sample{1,2}.md](https://github.com/onigomex/cheat/tree/main/sheet)
 

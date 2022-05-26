@@ -2,6 +2,9 @@
 This is a very simple "cheat" command. 
 The function is simply to list the markdown heading 2 (## title) with fzf and open the selected section in vim.
 
+![](https://raw.githubusercontent.com/onigomex/cheat/images/README-demo01.png)
+![](https://raw.githubusercontent.com/onigomex/cheat/images/README-demo02.png)
+
 
 
 ## Installation

@@ -21,6 +21,7 @@ Examples:
     $APPNAME -f : List all cheat files
     $APPNAME -f xxx : List cheat files filtered by the string xxx
     $APPNAME -c : cd $CHEAT_BASE_PATH
+    $APPNAME -u : git pull $CHEAT_BASE_PATH
 
 Dependencies:
     - fzf: https://github.com/junegunn/fzf
@@ -88,6 +89,11 @@ changedir() {
     exec $SHELL
 }
 
+update() {
+    cd "$CHEAT_BASE_PATH"
+    git pull
+}
+
 main() {
     [[ "$1" == "--help" ]] && usage
     [[ "$1" == "--version" ]] && version
@@ -96,6 +102,7 @@ main() {
     case $option in
         -f)    shift && file "$@" && return ;;
         -c)    shift && changedir && return ;;
+        -u)    shift && update && return ;;
         *)     item "$@" && return ;;
     esac
 }
